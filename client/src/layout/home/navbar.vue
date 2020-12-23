@@ -1,83 +1,55 @@
 <template>
- <div class="nav-wrapper">
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-
-  <div class="navbar-brand">
-      <div class="nav-links">
-          <ul v-for="link in links" :key="link">
-              <li class="nav-items">{{link}}</li>
-          </ul>
-      </div>
-    <a class="navbar-item" href="#">
-      <img src="@/assets/logo.png" class="pr-1" width="30" height="30">
-      <h1>AsyncPro</h1>
-    </a>
-
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
-    @click="openNav">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-
-  <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
+  <div class="logo-wrapper">
+      <div class="logo-bg">
+        <div class="logo"></div>
     </div>
   </div>
-</nav>
-</div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      links: [
-        'facebook',
-        'instagram',
-        'youtube',
-      ],
-    };
-  },
-  methods: {
-    openNav() {
-      const navburger = document.getElementsByClassName('navbar-burger')[0].classList;
-      const navmenu = document.getElementsByClassName('navbar-menu')[0].classList;
-      const findActive = navmenu.contains('is-active');
-      if (findActive) {
-        navmenu.remove('is-active');
-        navburger.remove('is-active');
-      } else {
-        navmenu.add('is-active');
-        navburger.add('is-active');
-      }
-    },
-  },
-
-};
-</script>
-
-<style>
-.elevate {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #77aaff;
-    box-shadow:  2px 2px 2px 2px;
+<style lang= "scss" scoped>
+.logo-wrapper {
+  height: 20vh;
+  background: rgba(242, 113, 33, 0.4);
 }
-nav {
-    align-items: center;
-    margin: 0 20% 0 20%;
+.logo-bg {
+	background: linear-gradient(
+		45deg,
+		#f09433 0%,
+		#e6683c 25%,
+		#dc2743 50%,
+		#cc2366 75%,
+		#bc1888 100%
+	);
+	position: relative;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 15px;
+	box-shadow: 0 0 13px rgba(29, 28, 28, 0.4);
 }
-.nav-wrapper {
-    border-bottom: 1.5px solid #bebaba;
+.logo-bg .logo {
+	position: absolute;
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	border: 5px solid #fff;
+	border-radius: 50px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
-img {
-   transition: transform .3s;
-}
-a img:hover {
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
+.logo-bg .logo::before {
+	position: absolute;
+	content: "";
+	height: 40px;
+	width: 40px;
+	background: transparent;
+	border: 3px solid #fff;
+	border-radius: 15px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 </style>

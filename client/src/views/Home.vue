@@ -6,7 +6,6 @@
         >
         <nav-bar />
         <br>
-        <home-main />
     </div>
 </template>
 
@@ -16,7 +15,6 @@ import NavBar from '../layout/home/navbar.vue';
 export default {
   components: {
     NavBar,
-    HomeMain: () => import('../layout/home/main.vue'),
   },
 };
 </script>
