@@ -8,6 +8,8 @@
         "lint": "vue-cli-service lint"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.1",
+        "@fortawesome/vue-fontawesome": "^2.0.2",
         "buefy": "^0.9.4",
         "core-js": "^3.6.5",
         "vue": "^2.6.11",
@@ -43,8 +45,14 @@
         },
         "rules": {
             "vue/max-attributes-per-line": "off",
-            "max-len": ["error", { "code": 120 }],
-            "no-tabs": 0
+            "max-len": [
+                "error",
+                {
+                    "code": 120
+                }
+            ],
+            "no-tabs": 0,
+            "global-require": 0
         }
     },
     "browserslist": [
