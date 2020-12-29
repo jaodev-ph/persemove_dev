@@ -1,72 +1,45 @@
 <template>
-  <div class="nav">
-    <div v-for="(index, link) in links" :key="link.index">
-      <p>{{ link.src }}</p>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://bulma.io">
+        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+      </a>
+
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false  "
+        data-target="navbarBasicExample"
+        @click="openNav"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-    <div class="nav-wrapper">
-      <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <ul class="nav-links">
-            <li class="nav-items">
-              <a href="">
-                <img
-                  src="@/assets/img/icons/fb.svg"
-                  style="width: 25px; height: 25px"
-              /></a>
-            </li>
-            <li class="nav-items">
-              <a href="">
-                <img
-                  src="@/assets/img/icons/ig.svg"
-                  style="width: 25px; height: 25px"
-              /></a>
-            </li>
-            <li class="nav-items">
-              <a href="">
-                <img
-                  src="@/assets/img/icons/yt.svg"
-                  style="width: 25px; height: 25px"
-              /></a>
-            </li>
-          </ul>
-          <div class="logo">
-            <div class="logo-style">
-              <a href="#"><img src="@/assets/logo.png" class="pr-1" /></a>
-              <h1><legend>AsyncPro</legend></h1>
-              <h4>The Official Website</h4>
-            </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item a">Overview</a>
+        <div class="navbar-item has-dropdown is-hoverable a">
+          <a class="navbar-link">Inquiry</a>
+
+          <div class="navbar-dropdown">
+            <a class="navbar-item">Trace and Track</a>
+            <a class="navbar-item">Shipping Rate</a>
+            <hr class="navbar-divider" />
+            <a class="navbar-item">Report an issue</a>
           </div>
-
-          <a
-            role="button"
-            class="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-            @click="openNav"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
         </div>
+             <a class="navbar-item a">About</a>
+            <a class="navbar-item a">Contact</a>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start"></div>
-        </div>
-      </nav>
-    </div>
-    <div class="tab-wrapper">
-      <div class="tab">
-        <ul class="tab-item">
-          <li>Overview</li>
-          <li>Project</li>
-          <li>Skills</li>
-          <li>Contact</li>
-        </ul>
       </div>
     </div>
-  </div>
+    </div>
+  </nav>
 </template>
 
 <script>
@@ -95,87 +68,11 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.tab-wrapper {
-  margin: 0 20% 0 20%;
-  border: 1px solid black;
-  position: relative;
-  height: 10vh;
-  margin-top: 120px;
-  .tab .tab-item {
-	display: flex;
-	justify-content: center;
-    li {
-      padding: 10px;
-      justify-items: center;
-      text-align: center;
-      align-items: center;
-      cursor: pointer;
-    }
-    li:before {
-      content: "";
-      position: relative;
-      background: #41b883;
-      height: 10px;
-      width: 100%;
-    }
-    li:hover {
-      color: #41b883;
-    }
-  }
-}
-.nav {
-  height: 15rem;
-}
-.navbar-brand {
-  align-items: center;
-  .nav-links {
-    display: flex;
-  }
-  .nav-items {
-    padding-right: 15px;
-  }
-}
-.elevate {
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #77aaff;
-  box-shadow: 2px 2px 2px 2px;
-}
-
-.logo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -0%);
-  display: inline-block;
-  padding: 5px;
-  width: 200px;
-  height: 200px;
-  .logo-style {
-    text-align: center;
-    img {
-      background: white;
-      height: 100px;
-      padding: 10px;
-    }
-  }
-}
-
+<style lang="scss" scoped>
 nav {
-  align-items: center;
-  margin: 0 20% 0 20%;
+  border-bottom: 2px solid rgb(199, 196, 196);
 }
-.nav-wrapper {
-  border-bottom: 1.5px solid #bebaba;
-  border-top: 4px solid #41b883;
-}
-img {
-  transition: transform 0.3s;
-}
-a img:hover {
-  -ms-transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
+.a:hover{
+ border-bottom:  3px solid rgb(168, 36, 36);
 }
 </style>

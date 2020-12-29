@@ -9,13 +9,9 @@ export default {
 };
 </script>
 <style lang="scss">
-.main{
-	margin: 0 30px 0 30px;
-}
-#app{
-	font-family: 'Open Sans-serif';
-	font-weight: 500;
-	line-height: 1.6;
-	font-size: 18px;
+#app {
+	font-size: 16px;
+	font-weight: 600;
+	font-family:Arial, Helvetica, sans-serif;
 }
 </style>
